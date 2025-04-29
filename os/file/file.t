@@ -13,7 +13,7 @@ Read(t * T, mem [], offset, size uint) (n uint, err) {
 }
 
 Write(t * T, mem [], offset, size uint) err {
-    <- 0
+    return 0
 }
 
 Free(t * T) {
