@@ -1,5 +1,5 @@
 New() [] {
-    mem := <$^>
+    mem := <>
     mem  = mem + $^
 
     len uint = 0
