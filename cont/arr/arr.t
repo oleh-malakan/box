@@ -1,18 +1,18 @@
 _step uint = 128
 
-New() [] * {
+New() [] {
 }
 
-Append(arr [] *, v *) [] * {
+Append(arr [], v) [] {
 }
 
-Len(arr [] *) uint {
+Len(arr []) uint {
 }
 
-Cap(arr [] *) uint {
+Cap(arr []) uint {
 }
 
-Free(arr [] *) {
+Free(arr []) {
 }
 
 _New() (t * T) {
