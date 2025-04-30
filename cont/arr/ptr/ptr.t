@@ -16,7 +16,7 @@ Append(mem [] *, v *) [] * {
         mem< -(2 * _$uint): _$uint> = cap    
 
         tmp   := mem
-        mem    = <> [cap * _$* + $^]
+        mem    = [] * (<> [cap * _$* + $^])
         mem[:] = tmp[-$^: len + $^]
         mem    = mem + $^
 
