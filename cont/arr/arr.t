@@ -1,17 +1,28 @@
 New() [] {
+    mem := <$^>
+    mem  = mem + $^
+    uint(mem[-      $uint ]) = 0
+    uint(mem[- (2 * $uint)]) = 0
+    <- mem     
 }
 
-Append(arr [], v) [] {
+Append(mem [], v) [] {
+    <-
 }
 
-Len(arr []) uint {
+Len(mem []) uint {
+    <- uint(m[- $uint])
 }
 
-Cap(arr []) uint {
+Cap(mem []) uint {
+    <- uint(m[- (2 * $uint)])
 }
 
-Free(arr []) {
+Free(mem []) {
 }
+
+
+
 
 _New() (t * T) {
     t = <> * T
