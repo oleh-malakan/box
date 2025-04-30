@@ -2,7 +2,7 @@ New() [] {
     mem := <>
     mem  = mem + $^
 
-    mem< -     _$uint : _$uint> = uint(0)
+    mem< -_$uint: _$uint>       = uint(0)
     mem< -(2 * _$uint): _$uint> = uint(0)
 
     <- mem     
