@@ -3,8 +3,7 @@ _step uint = 128
 New() [] * {
     m := <^>
     m  = m + ^
-    uint(m[-      $uint ]) = 0
-    uint(m[- (2 * $uint)]) = 0
+    
     <- m
 }
 
