@@ -16,11 +16,11 @@ Append(mem [] *, v *) [] * {
         mem< -(2 * _$uint): _$uint> = cap    
 
         tmp   := mem
-        mem    = [] * (<> [cap * _$* + $^])
-        mem[:] = tmp[-$^: len + $^]
+        mem    = <cap * _$* + $^>
+        mem<:> = tmp<-$^: len * _$* + $^>
         mem    = mem + $^
 
-        ~ <> [len * _$* + $^] ([](tmp) - $^)
+        ~ <len * _$* + $^> (tmp - $^)
     }
  
     mem[len] = v
@@ -39,5 +39,5 @@ Cap(mem [] *) uint {
 }
 
 Free(mem [] *) {
-    ~ <> [%Cap(mem) * _$* + $^] ([](mem) - $^)
+    ~ <%Cap(mem) * _$* + $^> (mem - $^)
 }
