@@ -9,7 +9,25 @@ New() [] {
 }
 
 Append(mem [], v) [] {
-    <-
+    len := %Len(mem)
+    cap := %Cap(mem)
+    ? len == cap {
+        cap += 128
+        mem< -(2 * _$uint): _$uint> = cap    
+
+        tmp   := mem
+        mem    = <> [cap + $^]
+        mem[:] = tmp[-$^: len + $^]
+        mem    = mem + $^
+
+        ~ <> [len * _$* + $^] (tmp - $^)
+    }
+ 
+    mem[len] = v
+    len++
+    mem< -_$uint : _$uint> = len
+    
+    <- mem
 }
 
 Len(mem []) uint {
@@ -21,7 +39,7 @@ Cap(mem []) uint {
 }
 
 Free(mem []) {
-    ~ <%Cap(mem) + $^> (mem - $^)
+    ~ <> [%Cap(mem) + $^] (mem - $^)
 }
 
 
