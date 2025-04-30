@@ -1,11 +1,7 @@
+<cont/arr>
+
 New() [] * {
-    mem := <>
-    mem  = mem + $^
-
-    mem< -_$uint : _$uint>      = uint(0)
-    mem< -(2 * _$uint): _$uint> = uint(0)
-
-    <- mem     
+    <- %arr.New()   
 }
 
 Append(mem [] *, v *) [] * {
@@ -31,11 +27,11 @@ Append(mem [] *, v *) [] * {
 }
 
 Len(mem [] *) uint {
-    <- mem< -_$uint: _$uint>
+    <- %arr.Len(mem)
 }
 
 Cap(mem [] *) uint {
-    <- mem< -(2 * _$uint): _$uint>
+    <- %arr.Cap(mem)
 }
 
 Free(mem [] *) {
