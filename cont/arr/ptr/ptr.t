@@ -17,7 +17,7 @@ Append(mem [] *, v *) [] * {
 
         tmp   := mem
         mem    = <cap * _$* + $^>
-        mem<:> = tmp<-$^: len * _$* + $^>
+        mem<:> = tmp< -$^: len * _$* + $^>
         mem    = mem + $^
 
         ~ <len * _$* + $^> (tmp - $^)
