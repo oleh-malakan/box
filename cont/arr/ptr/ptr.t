@@ -1,8 +1,8 @@
 _step uint = 128
 
 New() [] * {
- m := <>
-    m  = m + p
+ mem := <>
+    mem  = mem + p
       
 }
 
