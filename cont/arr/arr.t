@@ -1,12 +1,21 @@
 _step uint = 128
 
-T (
-    Mem [] *
-    Len uint 
-    cap uint 
-)
- 
-New() (t * T) {
+New() [] * {
+}
+
+Append(arr [] *, v *) [] * {
+}
+
+Len(arr [] *) uint {
+}
+
+Cap(arr [] *) uint {
+}
+
+Free(arr [] *) {
+}
+
+_New() (t * T) {
     t = <> * T
 
     t.Mem = nil
@@ -16,7 +25,7 @@ New() (t * T) {
     <- t, 0
 }
 
-Add(t * T, v *) {    
+_Add(t * T, v *) {    
     ? t.Len == t.cap {
         tmp     := t.Mem
         t.cap   += _step
@@ -29,7 +38,7 @@ Add(t * T, v *) {
     t.Len++
 }
 
-Free(t * T) {
+_Free(t * T) {
     ~ <> [t.cap] t.Mem
     ~ <> t
 }
