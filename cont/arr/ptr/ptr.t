@@ -1,8 +1,8 @@
 _step uint = 128
 
 New() [] * {
-    mem := <^>
-    mem  = mem + ^
+    mem := <$^>
+    mem  = mem + $^
     uint(mem[-      $uint ]) = 0
     uint(mem[- (2 * $uint)]) = 0
     <- mem     
