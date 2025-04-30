@@ -1,6 +1,6 @@
 _step uint = 128
 
-New() [] * {
+New() ([] *) {
     m := <^>
     m  = m + ^
     uint(m[-      $uint ]) = 0
@@ -8,7 +8,7 @@ New() [] * {
     <- m
 }
 
-Append(arr [] *, v *) [] * {
+Append(arr [] *, v *) ([] *) {
     <-
 }
 
