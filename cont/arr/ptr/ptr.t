@@ -1,7 +1,9 @@
 _step uint = 128
 
 New() [] * {
-    
+ m := <^>
+    m  = m + ^
+      
 }
 
 Append(arr [] *, v *) [] * {
