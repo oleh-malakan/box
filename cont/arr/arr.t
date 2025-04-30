@@ -20,7 +20,7 @@ Append(mem [], v) [] {
         mem[:] = tmp[-$^: len + $^]
         mem    = mem + $^
 
-        ~ <> [len * _$* + $^] (tmp - $^)
+        ~ <> [len + $^] (tmp - $^)
     }
  
     mem[len] = v
