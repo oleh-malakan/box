@@ -11,12 +11,12 @@ Append(mem [] *, v *) [] * {
         cap += arr._Step
         mem< -(2 * _$uint): _$uint> = cap    
 
-        tmp   := mem
+        tmp   := mem - $^
         mem    = <> [cap * _$* + $^]
-        mem<:> = tmp< -$^: len * _$* + $^>
+        mem<:> = tmp<: len * _$* + $^>
         mem    = mem + $^
 
-        ~ <len * _$* + $^> (tmp - $^)
+        ~ <len * _$* + $^> tmp
     }
  
     mem[len] = v
