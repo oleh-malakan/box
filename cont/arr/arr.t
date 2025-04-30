@@ -11,7 +11,6 @@ New() [] {
     <- mem     
 }
 
-
 Append(mem [], v) [] {
     <-
 }
