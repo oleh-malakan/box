@@ -11,8 +11,8 @@ New() [] {
 }
 
 Append(mem [], v) [] {
-    len := %Len(mem)
-    cap := %Cap(mem)
+    len := _Len(mem)
+    cap := _Cap(mem)
     ? len == cap {
         cap += _Step
         mem< -(2 * _$uint): _$uint> = cap    
@@ -41,5 +41,5 @@ Cap(mem []) uint {
 }
 
 Free(mem []) {
-    ~ <%Cap(mem) + $^> (mem - $^)
+    ~ <_Cap(mem) + $^> (mem - $^)
 }
