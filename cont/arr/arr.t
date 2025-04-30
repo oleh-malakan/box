@@ -1,8 +1,5 @@
 _step uint = 128
 
-
-Append(
-
 T (
     Mem [] *
     Len uint 
