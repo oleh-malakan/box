@@ -8,7 +8,7 @@ Append(mem [] *, v *) [] * {
     len := %Len(mem)
     cap := %Cap(mem)
     ? len == cap {
-        cap += 128
+        cap += arr._Step
         mem< -(2 * _$uint): _$uint> = cap    
 
         tmp   := mem
