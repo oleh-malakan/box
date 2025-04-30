@@ -21,4 +21,6 @@ Cap(mem [] *) uint {
 }
 
 Free(mem [] *) {
+    mem = mem - $^
+    ~ [$^ + (%Cap(mem) * _$*)] mem *
 }
