@@ -1,20 +1,16 @@
-<cont/arr/tools/helper>
+<cont/arr/base>
+
+_step = 128
 
 New() [] {
-    mem := <>
-    mem  = mem + $^
-
-    mem< -_$uint: _$uint>       = uint(0)
-    mem< -(2 * _$uint): _$uint> = uint(0)
-
-    <- mem     
+    <- _base.New()     
 }
 
 Append(mem [], v) [] {
     len := _Len(mem)
     cap := _Cap(mem)
     ? len == cap {
-        cap += helper._Step
+        cap += _step
         mem< -(2 * _$uint): _$uint> = cap    
 
         tmp   := mem - $^
