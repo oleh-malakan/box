@@ -46,6 +46,6 @@ Cap(mem []) uint {
     <- mem[-(_$uint + _$uint): _$uint]
 }
 
-FreeSize(mem [], sizeType uint) {
+Free(mem [], sizeType uint) {
     ~ [_Cap(mem) * sizeType + $^] (mem - $^)
 }
