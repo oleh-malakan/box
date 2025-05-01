@@ -2,54 +2,50 @@ New() [] {
     mem := <>
     mem  = mem + $^
  
-    SetLen(mem, 0)
-    SetCap(mem, 0)
+    _SetLen(mem, 0)
+    _SetCap(mem, 0)
  
     <- mem
 }
 
-Append(mem, v [], size, step uint) [] {
-}
-
-
-Append(mem [] *, v *) [] * {
-    len := %Len(mem)
-    cap := %Cap(mem)
+Append(mem, v [], sizeType, step uint) [] {
+    len := _Len(mem)
+    cap := _Cap(mem)
     ? len == cap {
-        cap += arr._Step
-        mem< -(2 * _$uint): _$uint> = cap    
+        cap += step
+        _SetCap(mem, cap)
 
         tmp   := mem - $^
-        mem    = <> [cap * _$* + $^]
-        mem<:> = tmp<: len * _$* + $^>
+        mem    = <> [cap * sizeType + $^]
+        mem[:] = tmp[: len * sizeType + $^]
         mem    = mem + $^
 
-        ~ <len * _$* + $^> tmp
+        ~ [len * sizeType + $^] tmp
     }
  
-    mem[len] = v
+    mem[len: sizeType] = v[:]
     len++
-    mem< -_$uint : _$uint> = len
+    _SetLen(len)
     
     <- mem
 }
 
 SetLen(mem [], v uint) {
-    mem< -_$uint: _$uint> = v
+    mem[-_$uint: _$uint] = v
 }
 
 SetCap(mem [], v uint) {
-    mem< -(_$uint + _$uint): _$uint> = v
+    mem[-(_$uint + _$uint): _$uint] = v
 }
  
-Len(mem [] *) uint {
-    <- %arr.Len(mem)
+Len(mem []) uint {
+    <- mem[-_$uint: _$uint]
 }
 
-Cap(mem [] *) uint {
-    <- %arr.Cap(mem)
+Cap(mem []) uint {
+    <- mem[-(_$uint + _$uint): _$uint]
 }
 
-Free(mem [] *) {
-    ~ <%Cap(mem) * _$* + $^> (mem - $^)
+FreeSize(mem [], sizeType uint) {
+    ~ [_Cap(mem) * sizeType + $^] (mem - $^)
 }
