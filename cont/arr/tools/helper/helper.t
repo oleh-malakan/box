@@ -1,4 +1,4 @@
-_Step uint = 128
+Step uint = 128
 
 New() [] {
 }
