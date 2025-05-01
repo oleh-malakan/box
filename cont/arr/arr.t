@@ -1,11 +1,11 @@
 <cont/arr/base>
 
 New(step uint) [] {
-    <- base._New(step)     
+    <- base._New(_$, step)     
 }
 
 Append(mem [], v) [] {      
-    <- base._Append(mem, v, _$)
+    <- base._Append(mem, v)
 }
 
 Len(mem []) uint {
@@ -17,5 +17,5 @@ Cap(mem []) uint {
 }
 
 Free(mem []) {
-    base._Free(mem, _$)
+    base._Free(mem)
 }
