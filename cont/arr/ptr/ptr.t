@@ -1,7 +1,7 @@
-<cont/arr>
+<cont/arr/base>
 
 New() [] * {
-    <- %arr.New()   
+    <- _base.New()   
 }
 
 Append(mem [] *, v *) [] * {
