@@ -1,12 +1,16 @@
 New() [] {
+    mem := <>
+    mem  = mem + $^
+ 
+    SetLen(mem, 0)
+    SetCap(mem, 0)
+ 
+    <- mem
 }
 
 Append(mem, v [], size, step uint) [] {
 }
 
-New() [] * {
-    <- %arr.New()   
-}
 
 Append(mem [] *, v *) [] * {
     len := %Len(mem)
@@ -30,6 +34,14 @@ Append(mem [] *, v *) [] * {
     <- mem
 }
 
+SetLen(mem [], v uint) {
+    mem< -_$uint: _$uint> = v
+}
+
+SetCap(mem [], v uint) {
+    mem< -(_$uint + _$uint): _$uint> = v
+}
+ 
 Len(mem [] *) uint {
     <- %arr.Len(mem)
 }
