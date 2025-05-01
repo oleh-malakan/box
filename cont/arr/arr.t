@@ -1,13 +1,11 @@
 <cont/arr/base>
 
-_step = 128
-
-New() [] {
-    <- base._New()     
+New(step uint) [] {
+    <- base._New(step)     
 }
 
 Append(mem [], v) [] {      
-    <- base._Append(mem, v, _$, _step)
+    <- base._Append(mem, v, _$)
 }
 
 Len(mem []) uint {
