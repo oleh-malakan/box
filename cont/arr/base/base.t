@@ -58,5 +58,5 @@ Step(mem []) uint {
 }
 
 Free(mem []) {
-    ~ [_Cap(mem) * _TypeSize() + $^] (mem - $^)
+    ~ [_Cap(mem) * _TypeSize(mem) + $^] (mem - $^)
 }
