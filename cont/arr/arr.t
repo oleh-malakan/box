@@ -3,7 +3,7 @@
 _step = 128
 
 New() [] {
-    <- _base.New()     
+    <- base._New()     
 }
 
 Append(mem [], v) [] {
