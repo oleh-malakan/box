@@ -1,4 +1,4 @@
-_Step uint = 128
+<cont/arr/tools/helper>
 
 New() [] {
     mem := <>
@@ -14,7 +14,7 @@ Append(mem [], v) [] {
     len := _Len(mem)
     cap := _Cap(mem)
     ? len == cap {
-        cap += _Step
+        cap += helper._Step
         mem< -(2 * _$uint): _$uint> = cap    
 
         tmp   := mem - $^
