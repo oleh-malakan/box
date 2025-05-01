@@ -5,7 +5,7 @@ New(step uint) [] * {
 }
 
 Append(mem [] *, v *) [] * {      
-    <- base._Append(mem, v, _$*, _step)
+    <- base._Append(mem, v, _$*)
 }
 
 Len(mem [] *) uint {
