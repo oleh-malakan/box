@@ -15,7 +15,7 @@ Append(mem, v []) [] {
     cap := _Cap(mem) 
     typeSize := _typeSize(mem)
     ? len == cap {
-        cap += _step(mem)
+        cap += mem[-(_$uint * 4): _$uint]
         _setCap(mem, cap)
 
         tmp   := mem - $^
@@ -55,8 +55,4 @@ setCap(mem [], v uint) {
 
 typeSize(mem []) uint {
     <- mem[-(_$uint * 3): _$uint]
-}
-
-step(mem []) uint {
-    <- mem[-(_$uint * 4): _$uint]
 }
