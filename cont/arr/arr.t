@@ -19,5 +19,5 @@ Cap(mem []) uint {
 }
 
 Free(mem []) {
-    base._FreeSize(mem, _$)
+    base._Free(mem, _$)
 }
