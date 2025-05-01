@@ -1,19 +1,21 @@
-New(step uint) [] {
+New(sizeType, step uint) [] {
     mem := <>
     mem  = mem + $^
  
     _SetLen(mem, 0)
     _SetCap(mem, 0)
-    mem[-(_$uint * 3): _$uint] = step
+    mem[-(_$uint * 3): _$uint] = sizeType 
+    mem[-(_$uint * 4): _$uint] = step
 
     <- mem
 }
 
-Append(mem, v [], sizeType) [] {
+Append(mem, v []) [] {
     len := _Len(mem)
     cap := _Cap(mem) 
+    sizeType uint = mem[-(_$uint * 3): _$uint]
     ? len == cap {
-        cap += uint(mem[-(_$uint * 3): _$uint])
+        cap += uint(mem[-(_$uint * 4): _$uint])
         _SetCap(mem, cap)
 
         tmp   := mem - $^
@@ -47,6 +49,6 @@ Cap(mem []) uint {
     <- mem[-(_$uint * 2): _$uint]
 }
 
-Free(mem [], sizeType uint) {
-    ~ [_Cap(mem) * sizeType + $^] (mem - $^)
+Free(mem []) {
+    ~ [_Cap(mem) * uint(mem[-(_$uint * 3): _$uint]) + $^] (mem - $^)
 }
