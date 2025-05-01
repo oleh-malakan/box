@@ -11,9 +11,9 @@ New(typeSize, step uint) [] {
 }
 
 Append(mem, v []) [] {
-    len := _Len(mem)
-    cap := _Cap(mem) 
-    typeSize uint = _typeSize(mem)
+    len      := _Len(mem)
+    cap      := _Cap(mem) 
+    typeSize := _typeSize(mem)
     ? len == cap {
         cap += _step(mem)
         _setCap(mem, cap)
