@@ -1,39 +1,23 @@
 <cont/arr/base>
 
+_step = 128
+
 New() [] * {
-    <- _base.New()   
+    <- base._New()     
 }
 
-Append(mem [] *, v *) [] * {
-    len := %Len(mem)
-    cap := %Cap(mem)
-    ? len == cap {
-        cap += arr._Step
-        mem< -(2 * _$uint): _$uint> = cap    
-
-        tmp   := mem - $^
-        mem    = <> [cap * _$* + $^]
-        mem<:> = tmp<: len * _$* + $^>
-        mem    = mem + $^
-
-        ~ <len * _$* + $^> tmp
-    }
- 
-    mem[len] = v
-    len++
-    mem< -_$uint : _$uint> = len
-    
-    <- mem
+Append(mem [] *, v *) [] * {      
+    <- base._Append(mem, v, _$*, _step)
 }
 
 Len(mem [] *) uint {
-    <- %arr.Len(mem)
+    <- base._Len(mem)
 }
 
 Cap(mem [] *) uint {
-    <- %arr.Cap(mem)
+    <- base._Cap(mem)
 }
 
 Free(mem [] *) {
-    ~ <%Cap(mem) * _$* + $^> (mem - $^)
+    base._FreeSize(mem, _$*)
 }
