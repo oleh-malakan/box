@@ -6,36 +6,18 @@ New() [] {
     <- base._New()     
 }
 
-Append(mem [], v) [] {
-    len := _Len(mem)
-    cap := _Cap(mem)
-    ? len == cap {
-        cap += _step
-        mem< -(2 * _$uint): _$uint> = cap    
-
-        tmp   := mem - $^
-        mem    = <> [cap + $^]
-        mem<:> = tmp<: len + $^>
-        mem    = mem + $^
-
-        ~ <len + $^> tmp
-    }
- 
-    mem[len] = v
-    len++
-    mem< -_$uint : _$uint> = len
-    
-    <- mem
+Append(mem [], v) [] {      
+    <- base._Append(mem, v, _$, _step)
 }
 
 Len(mem []) uint {
-    <- mem< -_$uint: _$uint>
+    <- base._Len(mem)
 }
 
 Cap(mem []) uint {
-    <- mem< -(2 * _$uint): _$uint>
+    <- base._Cap(mem)
 }
 
 Free(mem []) {
-    ~ <_Cap(mem) + $^> (mem - $^)
+    base._FreeSize(mem, _$)
 }
