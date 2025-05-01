@@ -13,7 +13,7 @@ Append(mem, v [], sizeType) [] {
     len := _Len(mem)
     cap := _Cap(mem) 
     ? len == cap {
-        cap += mem[-(_$uint * 3): _$uint]
+        cap += uint(mem[-(_$uint * 3): _$uint])
         _SetCap(mem, cap)
 
         tmp   := mem - $^
