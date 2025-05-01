@@ -58,5 +58,5 @@ typeSize(mem []) uint {
 }
 
 step(mem []) uint {
-    mem[-(_$uint * 4): _$uint]
+    <- mem[-(_$uint * 4): _$uint]
 }
