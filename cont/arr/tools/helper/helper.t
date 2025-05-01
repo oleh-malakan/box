@@ -1,4 +1,5 @@
-Step uint = 128
-
 New() [] {
+}
+
+Append(mem, v [], size, step uint) [] {
 }
