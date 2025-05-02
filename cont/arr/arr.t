@@ -2,8 +2,8 @@ New(typeSize, step uint) [] {
     mem := <>
     mem += $^
  
-    _SetLen(mem, 0)
-    _SetCap(mem, 0)
+    _setLen(mem, 0)
+    _setCap(mem, 0)
     mem[-(3 * _$uint): _$uint] = typeSize 
     mem[-(4 * _$uint): _$uint] = step
 
@@ -12,27 +12,19 @@ New(typeSize, step uint) [] {
 
 Append(mem, v []) [] {
     ? _Len(mem) == _Cap(mem) {
-        _SetCap(mem, _Cap(mem) + _Step(mem))
+        _setCap(mem, _Cap(mem) + mem[-(4 * _$uint): _$uint])
 
         tmp := mem
-        mem  = <> [_Cap(tmp) * _TypeSize(tmp) + $^]
-        mem  = tmp[-$^: _Len(tmp) * _TypeSize(tmp) + $^]
+        mem  = <> [_Cap(tmp) * _typeSize(tmp) + $^]
+        mem  = tmp[-$^: _Len(tmp) * _typeSize(tmp) + $^]
         mem += $^
-        ~ <> [-$^: _Len(tmp) * _TypeSize(tmp) + $^] tmp
+        ~ <> [-$^: _Len(tmp) * _typeSize(tmp) + $^] tmp
     }
  
-    mem[_Len(mem) * _TypeSize(mem): _TypeSize(mem)] = v
-    _SetLen(mem, _Len(mem) + 1)
+    mem[_Len(mem) * _typeSize(mem): _typeSize(mem)] = v
+    _setLen(mem, _Len(mem) + 1)
     
     <- mem
-}
-
-SetLen(mem [], v uint) {
-    mem[-_$uint: _$uint] = v
-}
-
-SetCap(mem [], v uint) {
-    mem[-(2 * _$uint): _$uint] = v
 }
 
 Len(mem []) uint {
@@ -43,14 +35,19 @@ Cap(mem []) uint {
     <- mem[-(2 * _$uint): _$uint]
 }
 
-TypeSize(mem []) uint {
+Free(mem []) {
+    ~ <> [-$^: _Cap(mem) * _typeSize(mem) + $^] mem
+}
+
+setLen(mem [], v uint) {
+    mem[-_$uint: _$uint] = v
+}
+
+setCap(mem [], v uint) {
+    mem[-(2 * _$uint): _$uint] = v
+}
+
+typeSize(mem []) uint {
     <- mem[-(3 * _$uint): _$uint]
 }
 
-Step(mem []) uint {
-    <- mem[-(4 * _$uint): _$uint]
-}
-
-Free(mem []) {
-    ~ <> [-$^: _Cap(mem) * _TypeSize(mem) + $^] mem
-}
