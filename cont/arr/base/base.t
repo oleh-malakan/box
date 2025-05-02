@@ -14,10 +14,10 @@ Append(mem, v []) [] {
     ? _Len(mem) == _Cap(mem) {
         _SetCap(mem, _Cap(mem) + _Step(mem))
 
-        tmp   := mem - $^
-        mem    = <> [_Cap(mem) * _TypeSize(mem) + $^]
-        mem[:] = tmp[: _Len(mem) * _TypeSize(mem) + $^]
-        mem    = mem + $^
+        tmp := mem - $^
+        mem  = <> [_Cap(mem) * _TypeSize(mem) + $^]
+        mem  = tmp[: _Len(mem) * _TypeSize(mem) + $^]
+        mem  = mem + $^
 
         ~ <> [_Len(mem) * _TypeSize(mem) + $^] tmp
     }
