@@ -1,10 +1,10 @@
 New(typeSize, step uint) [] {
     mem := <>
     mem += $^
- 
+
     _setLen(mem, 0)
     _setCap(mem, 0)
-    mem[-(3 * _$uint): _$uint] = typeSize 
+    mem[-(3 * _$uint): _$uint] = typeSize
     mem[-(4 * _$uint): _$uint] = step
 
     <- mem
@@ -20,10 +20,10 @@ Append(mem, v []) [] {
         mem += $^
         ~ <> [-$^: _Len(tmp) * _typeSize(tmp) + $^] tmp
     }
- 
+
     mem[_Len(mem) * _typeSize(mem): _typeSize(mem)] = v
     _setLen(mem, _Len(mem) + 1)
-    
+
     <- mem
 }
 
