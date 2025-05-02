@@ -10,6 +10,10 @@ New(typeSize, step uint) [] {
     <- mem
 }
 
+NewAlign(typeSize, step, align uint) [] {
+    <-
+}
+
 Append(mem, v []) [] {
     ? _Len(mem) == _Cap(mem) {
         _SetCap(mem, _Cap(mem) + _Step(mem))
