@@ -50,4 +50,3 @@ setCap(mem [], v uint) {
 typeSize(mem []) uint {
     <- mem[-(3 * _$uint): _$uint]
 }
-
