@@ -11,24 +11,19 @@ New(typeSize, step uint) [] {
 }
 
 Append(mem, v []) [] {
-    len := _Len(mem)
-    cap := _Cap(mem) 
-    typeSize := _TypeSize(mem)
-    ? len == cap {
-        cap += _Step(mem)
-        _SetCap(mem, cap)
+    ? _Len(mem) == _Cap(mem) {
+        _SetCap(mem, _Cap(mem) + _Step(mem))
 
         tmp   := mem - $^
-        mem    = <> [cap * typeSize + $^]
-        mem[:] = tmp[: len * typeSize + $^]
+        mem    = <> [_Cap(mem) * _TypeSize(mem) + $^]
+        mem[:] = tmp[: _Len(mem) * _TypeSize(mem) + $^]
         mem    = mem + $^
 
-        ~ [len * typeSize + $^] tmp
+        ~ [_Len(mem) * _TypeSize(mem) + $^] tmp
     }
  
-    mem[len: typeSize] = v[:]
-    len++
-    _SetLen(len)
+    mem[_Len(mem): _TypeSize(mem)] = v[:]
+    _SetLen(_Len(mem) + 1)
     
     <- mem
 }
