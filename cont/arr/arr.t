@@ -12,7 +12,7 @@ New(typeSize, step uint) [] {
 
 Append(mem, v []) [] {
     ? _Len(mem) == _Cap(mem) {
-        _setCap(mem, _Cap(mem) + mem[-(4 * _$uint): _$uint])
+        _setCap(mem, _Cap(mem) + _step(mem))
 
         tmp := mem
         mem  = <> [_Cap(tmp) * _typeSize(tmp) + $^]
@@ -49,4 +49,8 @@ setCap(mem [], v uint) {
 
 typeSize(mem []) uint {
     <- mem[-(3 * _$uint): _$uint]
+}
+
+step(mem []) uint {
+    <- mem[-(4 * _$uint): _$uint]
 }
