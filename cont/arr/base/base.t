@@ -18,8 +18,8 @@ Append(mem, v []) [] {
         mem  = <> [_Cap(mem) * _TypeSize(mem) + $^]
         mem  = tmp[-$^: _Len(tmp) * _TypeSize(tmp) + $^]
         mem += $^
-        tmp -= $^
-        ~ <> [_Len(mem) * _TypeSize(mem) + $^] tmp
+
+        ~ <> [-$^: _Len(mem) * _TypeSize(mem) + $^] tmp
     }
  
     mem[_Len(mem): _TypeSize(mem)] = v
@@ -53,6 +53,5 @@ Step(mem []) uint {
 }
 
 Free(mem []) {
-    mem -= $^
-    ~ <> [_Cap(mem) * _TypeSize(mem) + $^] mem
+    ~ <> [-$^: _Cap(mem) * _TypeSize(mem) + $^] mem
 }
