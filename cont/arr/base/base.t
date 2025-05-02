@@ -22,7 +22,7 @@ Append(mem, v []) [] {
         ~ <> [_Len(mem) * _TypeSize(mem) + $^] tmp
     }
  
-    mem[_Len(mem): _TypeSize(mem)] = v[:]
+    mem[_Len(mem): _TypeSize(mem)] = v
     _SetLen(_Len(mem) + 1)
     
     <- mem
