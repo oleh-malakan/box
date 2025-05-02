@@ -1,9 +1,9 @@
 New(typeSize, step uint) [] {
-    mem := <>
+    mem := <> [step * typeSize + $^]
     mem += $^
 
     _setLen(mem, 0)
-    _setCap(mem, 0)
+    _setCap(mem, step)
     mem[-(3 * _$uint): _$uint] = typeSize
     mem[-(4 * _$uint): _$uint] = step
 
