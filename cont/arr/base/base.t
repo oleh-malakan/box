@@ -35,12 +35,12 @@ SetLen(mem [], v uint) {
     mem[-_$uint: _$uint] = v
 }
 
-Len(mem []) uint {
-    <- mem[-_$uint: _$uint]
-}
-
 SetCap(mem [], v uint) {
     mem[-(2 * _$uint): _$uint] = v
+}
+
+Len(mem []) uint {
+    <- mem[-_$uint: _$uint]
 }
 
 Cap(mem []) uint {
