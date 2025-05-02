@@ -17,7 +17,7 @@ Append(mem, v []) [] {
 
         tmp := mem
 
-        mem = <> [_Cap(mem) * _TypeSize(mem) + $^]
+        mem = <> [_Cap(tmp) * _TypeSize(tmp) + $^]
         mem = tmp[-$^: _Len(tmp) * _TypeSize(tmp) + $^]
 
         mem += $^
