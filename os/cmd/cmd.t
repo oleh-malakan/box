@@ -8,8 +8,8 @@ Exec(cmd []) (t * T, err) {
     = t, 0
 }
 
-Read(t * T, b [], size uint) (n uint, err) {
-    = size, 0
+Read(t * T, b []) (n uint, err) {
+    = _$(b), 0
 }
 
 Free(t * T) {
