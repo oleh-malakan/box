@@ -3,7 +3,7 @@ _EOS = 0xFF
 T (
 )
 
-Exec(cmd [], size uint) (t * T, err) {
+Exec(cmd []) (t * T, err) {
     t = * T
     = t, 0
 }
