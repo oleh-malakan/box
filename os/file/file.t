@@ -3,7 +3,7 @@ _EOF = 0xFF
 T (
 )
 
-Open(path [], size uint) (t * T, err) {
+Open(path []) (t * T, err) {
     t = * T
     = t, 0
 }
