@@ -8,7 +8,7 @@ Exec(cmd []) (t * T, err) {
     = t, 0
 }
 
-Read(t * T, mem [], size uint) (n uint, err) {
+Read(t * T, b [], size uint) (n uint, err) {
     = size, 0
 }
 
