@@ -4,7 +4,7 @@ T (
 )
 
 Exec(cmd [], size uint) (t * T, err) {
-    t = <> * T
+    t = * T
     = t, 0
 }
 
@@ -13,5 +13,5 @@ Read(t * T, mem [], size uint) (n uint, err) {
 }
 
 Free(t * T) {
-    ~ <> t
+    ~ t
 }
