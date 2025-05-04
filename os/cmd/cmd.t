@@ -3,7 +3,7 @@ _EOS = 0xFF
 T (
 )
 
-Exec(cmd []) (t * T, err) {
+Exec(path string) (t * T, err) {
     t = * T
     = t, 0
 }
