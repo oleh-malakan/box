@@ -1,3 +1,3 @@
-Is(path [] char) bool {
+Is(path []) bool {
     = true
 }
