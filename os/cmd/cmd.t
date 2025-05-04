@@ -3,7 +3,7 @@ _EOS = 0xFF
 T (
 )
 
-Exec(path [] char) (t * T, err) {
+Exec(path []) (t * T, err) {
     t = * T
     = t, 0
 }
