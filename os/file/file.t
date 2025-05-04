@@ -3,7 +3,7 @@ _EOF = 0xFF
 T (
 )
 
-Open(path * string) (t * T, err) {
+Open(path [] char) (t * T, err) {
     t = * T
     = t, 0
 }
