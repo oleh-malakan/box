@@ -1,3 +1,3 @@
-Is(path [], size uint) bool {
-    = !0
+Is(path string) bool {
+    = true
 }
