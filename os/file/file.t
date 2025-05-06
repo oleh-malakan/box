@@ -4,7 +4,7 @@ T (
 )
 
 Open(path []) (t * T, err) {
-    t = * T
+    t = @ T
     = t, 0
 }
 
