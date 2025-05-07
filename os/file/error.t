@@ -1,8 +1,8 @@
 ErrorMessage(code) [] {
     # code {
     == _EOF:
-        = 'End of file'
+        = []
     :
-        = 'Unknown code'
+        = []
     }
 }
