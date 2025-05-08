@@ -1,4 +1,4 @@
-EOF = 0xF
+EOF = 0xFF
 
 T (
 )
