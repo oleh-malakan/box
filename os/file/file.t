@@ -12,7 +12,7 @@ Read(t * T, b [], offset uint) (n uint, err) {
     = _$(b), 0
 }
 
-Write(t * T, b [], offset uint) err {
+Write(t * T, b [], offset uint) (err) {
     = 0
 }
 
