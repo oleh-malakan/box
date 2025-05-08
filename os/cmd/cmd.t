@@ -1,4 +1,4 @@
-_EOS = 0xF
+_EOS = 0xFF
 
 T (
 )
