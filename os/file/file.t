@@ -9,7 +9,7 @@ Open(path []) (t * T, err) {
 }
 
 Read(t * T, b % [], offset, size uint) (n uint, err) {
-    = _$(b), 0
+    = size, 0
 }
 
 Write(t * T, b % [], offset, size uint) (err) {
