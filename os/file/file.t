@@ -8,8 +8,8 @@ Open(path []) (t * T, err) {
     = t, 0
 }
 
-Read(t * T, b [], offset, size uint) (err) {
-    = 0
+Read(t * T, b [], offset, size uint) (n uint, err) {
+    = size, 0
 }
 
 Write(t * T, b [], offset, size uint) (err) {
