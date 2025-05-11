@@ -1,5 +1,3 @@
-_EOS = 0xFF
-
 T (
 )
 
@@ -14,4 +12,12 @@ Next(t * T, b [], size uint) (n uint, err) {
 
 Free(t * T) {
     ~ t
+}
+
+eos() (err) {
+    = 0xFF
+}
+
+EOS(err) (bool) {
+    = err == _eos()    
 }
