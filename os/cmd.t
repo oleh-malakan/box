@@ -8,7 +8,7 @@ Exec(path []) (t * T, err) {
     = t, 0
 }
 
-Next(t * T, b % [], size uint) (n uint, err) {
+Next(t * T, b [], size uint) (n uint, err) {
     = size, 0
 }
 
