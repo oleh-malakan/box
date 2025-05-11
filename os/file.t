@@ -1,5 +1,3 @@
-EOF = 0xFF
-
 T (
 )
 
@@ -18,4 +16,12 @@ Write(t * T, b [], offset, size uint) (err) {
 
 Free(t * T) {
     ~ t
+}
+
+eof() (err) {
+    = 0xFF
+}
+
+EOF(err) (bool) {
+    = err == _eof()    
 }
