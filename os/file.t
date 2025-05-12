@@ -17,5 +17,5 @@ Write(t * T, b [], offset, size uint) (err) {
 }
 
 Close(t * T) {
-    ~ t
+    - t
 }
