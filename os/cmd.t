@@ -12,6 +12,6 @@ Next(t * T, b [], size uint) (n uint, err) {
     = size, 0
 }
 
-Close(t * T) {
+Free(t * T) {
     - t
 }
