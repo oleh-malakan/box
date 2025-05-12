@@ -13,5 +13,5 @@ Next(t * T, b [], size uint) (n uint, err) {
 }
 
 Close(t * T) {
-    ~ t
+    - t
 }
