@@ -1,5 +1,5 @@
-Get() (args [] []) {
+Get() (arg [] []) {
 }
 
-Free(args [] []) {
+Free(arg [] []) {
 }
