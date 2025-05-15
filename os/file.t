@@ -1,4 +1,6 @@
-EOF = 0xFF
+_ (
+    EOF = 0xFF
+)
 
 T (
 )
