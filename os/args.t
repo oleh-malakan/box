@@ -1,4 +1,4 @@
-Read() (arr []) {
+Read() (arr [] []) {
     arr = []
     =
 }
