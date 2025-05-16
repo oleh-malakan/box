@@ -1,5 +1,0 @@
-Print(b []) {
-}
-
-PrintLn(b []) {
-}
