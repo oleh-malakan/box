@@ -15,7 +15,7 @@ Read(t * T, b [], offset uint) (n uint, err) {
 }
 
 Write(t * T, b [], offset uint) (n uint, err) {
-    = 0
+    = 0, 0
 }
 
 Free(t * T) {
