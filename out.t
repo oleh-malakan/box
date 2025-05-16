@@ -1,5 +1,2 @@
 Print(b []) {
 }
-
-PrintLn(b []) {
-}
