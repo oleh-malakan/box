@@ -10,11 +10,11 @@ Open(path []) (t * T, err) {
     = t, 0
 }
 
-Read(t * T, b [], offset uint, size uint) (n uint, err) {
+Read(t * T, b [], offset uint) (n uint, err) {
     = size, 0
 }
 
-Write(t * T, b [], offset uint, size uint) (err) {
+Write(t * T, b [], offset uint) (err) {
     = 0
 }
 
