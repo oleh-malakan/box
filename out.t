@@ -1,0 +1,5 @@
+Print(b []) {
+}
+
+PrintLn(b []) {
+}
