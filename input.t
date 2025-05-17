@@ -1,7 +1,7 @@
 T (
 )
 
-Open(stream) (t * T, err) {
+Open() (t * T, err) {
     t = @
     = t, 0
 }
