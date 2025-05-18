@@ -1,2 +1,2 @@
-Print(b []) {
+Write(b []) {
 }
