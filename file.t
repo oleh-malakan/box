@@ -1,5 +1,4 @@
-(
-    file.h
+T (
 )
 
 Open(path []) (t * T, err) {
