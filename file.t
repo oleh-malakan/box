@@ -1,8 +1,5 @@
 (
-    EOF = 0xFF
-)
-
-T (
+    file.h
 )
 
 Open(path []) (t * T, err) {
