@@ -1,7 +1,7 @@
 T (
 )
 
-Open(path []) (t * T, err) {
+Open(path [], param) (t * T, err) {
     t = @
     = t, 0
 }
