@@ -14,6 +14,6 @@ Write(t * T, b [], offset uint) (n uint, err) {
     = 0, 0
 }
 
-Close(t * T) {
+Free(t * T) {
     ~ t
 }
