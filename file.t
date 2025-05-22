@@ -14,7 +14,7 @@ Write(t * T, b [], offset uint) (n uint, err) {
     = 0, 0
 }
 
-Close(t * T) (err) {
+Flush(t * T) (err) {
     = 0
 }
 
