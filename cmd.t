@@ -10,7 +10,7 @@ Exec(path []) (t * T, err) {
     = t, 0
 }
 
-Next(t * T, b []) (n uint, err) {
+Read(t * T, b []) (n uint, err) {
     = 0, 0
 }
 
