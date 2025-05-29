@@ -22,6 +22,6 @@ Flush(t * T) (err) {
     = 0
 }
 
-Close(t * T) {
+Free(t * T) {
     ~ t
 }
