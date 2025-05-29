@@ -1,7 +1,7 @@
 T (
 )
 
-Exec(path []) (t * T, err) {
+Start(path []) (t * T, err) {
     t = @
     = t, 0
 }
