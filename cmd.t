@@ -5,7 +5,7 @@
 T (
 )
 
-Run(path []) (t * T, err) {
+Exec(path []) (t * T, err) {
     t = @
     = t, 0
 }
