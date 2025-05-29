@@ -1,3 +1,3 @@
-Read(b [], offset) (n uint) {
-    = 0
+Read() (arr []) {
+    arr = []
 }
