@@ -1,14 +1,3 @@
-T (
-)
-
-Open() (t * T) {
-    t = @
-}
-
-Read(t * T, b []) (n uint) {
+Read(b [], offset) (n uint) {
     = 0
-}
-
-Free(t * T) {
-    ~ t
 }
