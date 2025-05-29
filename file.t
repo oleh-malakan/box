@@ -10,12 +10,12 @@ Open(path []) (t * T, err) {
     = t, 0
 }
 
-Read(t * T, b []) (n uint, err) {
-    = 0, 0
+Read(t * T, b []) (err) {
+    = 0
 }
 
-Write(t * T, b []) (n uint, err) {
-    = 0, 0
+Write(t * T, b []) (err) {
+    = 0
 }
 
 Free(t * T) {
