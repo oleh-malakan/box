@@ -7,7 +7,7 @@ Exec(path []) (t * T, err) {
 }
 
 Read(t * T, b []) (n uint) {
-    = 0, 0
+    = 0
 }
 
 Free(t * T) {
