@@ -6,7 +6,7 @@ Exec(path []) (t * T, err) {
     = t, 0
 }
 
-Read(t * T, b []) (n uint, err) {
+Read(t * T, b []) (n uint) {
     = 0, 0
 }
 
