@@ -11,7 +11,7 @@ Exec(path []) (t * T, err) {
 }
 
 Next(t * T, b []) (n uint, err) {
-    = 0, !0
+    = 0, EOF
 }
 
 Free(t * T) {
