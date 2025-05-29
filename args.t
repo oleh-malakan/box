@@ -1,3 +1,3 @@
 Read() (arr []) {
-    arr = @
+    arr = [] 
 }
