@@ -1,1 +1,1 @@
-# T program library 
+# T standard library 
