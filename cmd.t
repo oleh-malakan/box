@@ -5,12 +5,12 @@
 T (
 )
 
-Exec(path []) (t * T, err) {
+Run(path []) (t * T, err) {
     t = @
     = t, 0
 }
 
-Read(t * T, b []) (n uint, err) {
+Next(t * T, b []) (n uint, err) {
     = 0, 0
 }
 
