@@ -1,3 +1,11 @@
+Path() (arr []) {
+    arr = []
+}
+
+Args() (arr []) {
+    arr = []
+}
+
 (
     EOS = 0xFF
 )
@@ -5,7 +13,7 @@
 T (
 )
 
-Run(path []) (t * T, err) {
+Run(path [], args []) (t * T, err) {
     t = @
     = t, 0
 }
