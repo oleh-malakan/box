@@ -1,3 +1,4 @@
-Get() (arr []) {
-    arr = []
+Get() (path [], arr []) {
+    path = []
+    arr  = []
 }
