@@ -17,11 +17,3 @@ Next(t * T, b []) (n uint, err) {
 Free(t * T) {
     ~ t
 }
-
-Path() (arr []) {
-    arr = []
-}
-
-Args() (arr []) {
-    arr = []
-}
