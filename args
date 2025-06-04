@@ -1,3 +1,3 @@
-Read() (arr []) {
+Get() (arr []) {
     arr = []
 }
