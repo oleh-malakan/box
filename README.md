@@ -1,1 +1,1 @@
-# T standard library
+# T operating system library
