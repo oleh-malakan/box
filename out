@@ -1,11 +1,12 @@
 T (
 )
 
-Open() (t * T) {
-    = nil
+Open() (t * T, err) {
+    = nil, 0
 }
 
-Write(t * T, b []) {
+Write(t * T, b []) (n uint, err) {
+    = 0, 0
 }
 
 Free(t * T) {
