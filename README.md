@@ -1,1 +1,1 @@
-# T system library
+# T terminal library
