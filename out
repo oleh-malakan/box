@@ -1,8 +1,13 @@
-(
+T (
 )
 
-{
+Open() (t * T) {
+    = nil
 }
 
-Print(b []) {
+Print(t * T, b []) {
+}
+
+Free(t * T) {
+    ~ t
 }
