@@ -1,1 +1,1 @@
-# term
+# T terminal library
