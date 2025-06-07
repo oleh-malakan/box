@@ -1,1 +1,1 @@
-# T console module
+# T output module
