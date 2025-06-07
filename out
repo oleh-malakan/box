@@ -5,7 +5,7 @@ Open() (t * T) {
     = nil
 }
 
-Print(t * T, b []) {
+Write(t * T, b []) {
 }
 
 Free(t * T) {
